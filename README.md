@@ -10,9 +10,9 @@ Authentication. Firebase authentication includes a built-in email/password authe
 * Some benefits of using Firebase
 Firebase Real-Time Database Firebase standard Firebase storage Firebase Cloud Message Firebase notification Firebase Remote Config Firebase Crash Report Firebase Application Index Firebase Analytics Firebase Test Lab for Android
 
-# Add Firebase to your iOS project
+## Add Firebase to your iOS project
 
-Prerequisites
+### Prerequisites
 
 * Install the following:
 Xcode 10.3 or later CocoaPods 1.4.0 or later
@@ -22,20 +22,22 @@ Your project must target iOS 8 or later.
 
 * Set up a physical iOS device or use the iOS simulator to run your app.
 
-Do you want to use Cloud Messaging?
+### Do you want to use Cloud Messaging?
 
 * Sign into Firebase using your Google account.
 
-# Step 1: 
+## Step 1: 
 Create a Firebase project Before you can add Firebase to your iOS app, you need to create a Firebase project to connect to your iOS app. Visit Understand Firebase Projects to learn more about Firebase projects.
 
 Create a Firebase project
 
-# Step 2: 
+## Step 2: 
 Register your app with Firebase After you have a Firebase project, you can add your iOS app to it.
 Visit Understand Firebase Projects to learn more about best practices and considerations for adding apps to a Firebase project, including how to handle multiple build variants.
 
-1- Go to the Firebase console. 2- In the center of the project overview page, click the iOS icon (plat_ios) to launch the setup workflow.
+1- Go to the Firebase console. 
+
+2- In the center of the project overview page, click the iOS icon (plat_ios) to launch the setup workflow.
 
 If you've already added an app to your Firebase project, click Add app to display the platform options.
 
@@ -43,21 +45,25 @@ If you've already added an app to your Firebase project, click Add app to displa
 
 What's a bundle ID, and where do you find it?
 
-Make sure to enter the bundle ID that your app is actually using. The bundle ID value is case-sensitive, and it cannot be changed for this Firebase iOS app after it's registered with your Firebase project. 4- (Optional) Enter other app information: App nickname and App Store ID.
+Make sure to enter the bundle ID that your app is actually using. The bundle ID value is case-sensitive, and it cannot be changed for this Firebase iOS app after it's registered with your Firebase project. 
+
+4- (Optional) Enter other app information: App nickname and App Store ID.
 
 How are the App nickname and the App Store ID used within Firebase?
 
 5- Click Register app.
 
-# Step 3: 
-Add a Firebase configuration file 1- Click Download GoogleService-Info.plist to obtain your Firebase iOS config file (GoogleService-Info.plist).
+## Step 3: 
+Add a Firebase configuration file 
+
+1- Click Download GoogleService-Info.plist to obtain your Firebase iOS config file (GoogleService-Info.plist).
 What do you need to know about this config file?
 
 2- Move your config file into the root of your Xcode project. If prompted, select to add the config file to all targets.
 
 If you have multiple bundle IDs in your project, you must associate each bundle ID with a registered app in the Firebase console so that each app can have its own GoogleService-Info.plist file.
 
-# Step 4: 
+## Step 4: 
 Add Firebase SDKs to your app We recommend using CocoaPods to install the Firebase libraries. However, if you'd rather not use CocoaPods, you can integrate the SDK frameworks directly.
 Are you using one of the quickstart samples? The Xcode project and Podfile (with pods) are already present, but you'll still need to add your Firebase configuration file and install the pods.
 
@@ -81,8 +87,9 @@ $ pod install
 
 $ open your-project.xcworkspace
 
-# Step 5: 
+## Step 5: 
 Initialize Firebase in your app
+
 The final step is to add initialization code to your application. You may have already done this as part of adding Firebase to your app. If you're using a quickstart sample project, this has been done for you.
 
 1- Import the Firebase module in your UIApplicationDelegate: Swift
