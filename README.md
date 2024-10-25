@@ -1,104 +1,91 @@
-# Firebase
- 
-Firebase is a technology that allows you to create web applications without server-side programming, making development faster and easier. It supports Web, iOS, OS X and Android clients. Apps that use Firebase can use and control data without thinking about how data is stored and synchronized across different instances of the application in real-time.
+# Firebase 🔥
 
-#### Working with Firebase from a developer's perspective is a wonderful benefit, as they are the core technology of development.
+`Firebase` เป็นแพลตฟอร์มที่ช่วยให้การพัฒนาเว็บแอปพลิเคชันทำได้โดยไม่จำเป็นต้องเขียนโปรแกรมฝั่งเซิร์ฟเวอร์ ทำให้การพัฒนารวดเร็วและง่ายขึ้น มันรองรับลูกค้าใน `Web`, `iOS`, `OS X` และ `Android` แอปพลิเคชันที่ใช้ `Firebase` สามารถจัดการและควบคุมข้อมูลได้อย่างราบรื่น โดยไม่ต้องกังวลว่าข้อมูลจะถูกจัดเก็บและซิงโครไนซ์ในแบบเรียลไทม์ในหลาย ๆ ตัวอย่างของแอปพลิเคชัน
 
-* Advantages:
-Authentication. Firebase authentication includes a built-in email/password authentication system. It supports OAuth2 for Facebook, Google, Twitter and GitHub. Additionally, the Firebase standard integrates directly into the Firebase database so that you can use it to control access to your data. Hosting. Firebase comes with an easy-to-use hosting service for all your static files. It works from a global CDN with HTTP / 2. Real-time synchronization of data across all clients, be it Android, iOS or the Web, is very useful. With minimal code, you can notify users of chat boxes, live news feeds, new posts or friend requests, and more. The code for AJS is straightforward in any way. From querying data to integrating Twitter, Facebook and Google+ logins, you can implement it very quickly with some nice features. With automatic update notifications, it can sync both systems without manual messaging, WebSockets, etc. Allows you to consider data streams to create more scalable applications.
+### ประโยชน์สำหรับนักพัฒนา
+การทำงานกับ `Firebase` มอบข้อดีมากมาย ทำให้มันเป็นเทคโนโลยีหลักสำหรับการพัฒนาแอปพลิเคชันสมัยใหม่
 
-* Some benefits of using Firebase
-Firebase Real-Time Database Firebase standard Firebase storage Firebase Cloud Message Firebase notification Firebase Remote Config Firebase Crash Report Firebase Application Index Firebase Analytics Firebase Test Lab for Android
+### ข้อดี:
+- **การตรวจสอบสิทธิ์ (Authentication):** `Firebase` มีระบบการตรวจสอบสิทธิ์ด้วยอีเมล/รหัสผ่านในตัว และรองรับ `OAuth2` สำหรับ Facebook, Google, Twitter และ GitHub การรวมระบบนี้ช่วยให้คุณสามารถควบคุมการเข้าถึงข้อมูลของคุณได้โดยตรงผ่านฐานข้อมูล `Firebase`
+- **การโฮสต์ (Hosting):** `Firebase` ให้บริการโฮสต์ที่ใช้งานง่ายสำหรับไฟล์สแตติก โดยใช้ `CDN` ทั่วโลกพร้อม `HTTP/2` เพื่อประสิทธิภาพที่ดีขึ้น
+- **การซิงโครไนซ์ข้อมูลแบบเรียลไทม์:** `Firebase` ช่วยให้สามารถซิงโครไนซ์ข้อมูลในแบบเรียลไทม์ในทุกลูกค้า—ไม่ว่าจะเป็น `Android`, `iOS` หรือ `Web` ฟีเจอร์นี้มีประโยชน์โดยเฉพาะสำหรับแอปพลิเคชันแชท ฟีดข่าวสด โพสต์ใหม่ และคำขอเพื่อน ทั้งหมดนี้ใช้โค้ดเพียงเล็กน้อย
+- **API ที่เรียบง่าย:** `API` ของ `Firebase` เข้าใจง่าย ทำให้สามารถใช้งานได้อย่างรวดเร็ว เช่น การดึงข้อมูลและการเข้าสู่ระบบผ่านโซเชียลมีเดีย
+- **การอัปเดตอัตโนมัติ:** ด้วยการแจ้งเตือนอัปเดตอัตโนมัติ `Firebase` สามารถซิงโครไนซ์ระบบได้โดยไม่ต้องมีการส่งข้อความด้วยตนเอง โดยใช้ `WebSockets` เพื่อจัดการกับสตรีมข้อมูลได้อย่างมีประสิทธิภาพ ช่วยให้สามารถสร้างแอปพลิเคชันที่สามารถขยายตัวได้
 
-## Add Firebase to your iOS project
+### คุณสมบัติหลักของ Firebase:
+- Firebase Real-Time Database
+- Firebase Storage
+- Firebase Cloud Messaging
+- Firebase Notifications
+- Firebase Remote Config
+- Firebase Crash Reporting
+- Firebase Application Index
+- Firebase Analytics
+- Firebase Test Lab for Android
 
-### Prerequisites
+## การเพิ่ม Firebase ในโปรเจค iOS ของคุณ
 
-* Install the following:
-Xcode 10.3 or later CocoaPods 1.4.0 or later
+### ข้อกำหนดเบื้องต้น
+1. **ซอฟต์แวร์ที่ต้องการ:**
+   - `Xcode 10.3` หรือเวอร์ชันที่ใหม่กว่า
+   - `CocoaPods 1.4.0` หรือเวอร์ชันที่ใหม่กว่า
 
-* Make sure that your project meets these requirements:
-Your project must target iOS 8 or later.
+2. **ข้อกำหนดโปรเจค:**
+   - โปรเจคของคุณต้องมีเป้าหมาย `iOS 8` หรือใหม่กว่า
+   - คุณต้องมีอุปกรณ์ iOS จริงหรือตัวจำลอง iOS เพื่อเรียกใช้งานแอปของคุณ
 
-* Set up a physical iOS device or use the iOS simulator to run your app.
+### การใช้ Cloud Messaging
+หากคุณต้องการใช้ `Cloud Messaging` ลงชื่อเข้าใช้ `Firebase` โดยใช้บัญชี Google ของคุณ
 
-### Do you want to use Cloud Messaging?
+### ขั้นตอนที่ 1: สร้างโปรเจค Firebase
+เพื่อรวม Firebase เข้ากับแอป iOS ของคุณ คุณต้องสร้างโปรเจค `Firebase` ก่อน ไปที่เอกสาร `Firebase` เพื่อเรียนรู้เพิ่มเติมเกี่ยวกับการตั้งค่าโปรเจค
 
-* Sign into Firebase using your Google account.
+### ขั้นตอนที่ 2: ลงทะเบียนแอปของคุณกับ Firebase
+หลังจากสร้างโปรเจค `Firebase` แล้ว คุณสามารถเพิ่มแอป iOS ของคุณเข้าไปได้
 
-## Step 1: 
-Create a Firebase project Before you can add Firebase to your iOS app, you need to create a Firebase project to connect to your iOS app. Visit Understand Firebase Projects to learn more about Firebase projects.
+1. ไปที่ Firebase console
+2. ที่กลางหน้าสรุปโปรเจค คลิกที่ไอคอน `iOS (plat_ios)` เพื่อเริ่มขั้นตอนการตั้งค่า หากคุณได้เพิ่มแอปไปแล้ว คลิก "Add app" เพื่อแสดงตัวเลือกแพลตฟอร์ม
+3. ป้อน `Bundle ID` ของแอปของคุณในช่อง `iOS bundle ID` ให้แน่ใจว่าใช้ `Bundle ID` ที่แอปของคุณใช้งานอยู่ เนื่องจากเป็นเรื่องที่ต้องระมัดระวังเกี่ยวกับตัวพิมพ์ใหญ่และเล็ก และไม่สามารถเปลี่ยนแปลงได้หลังจากลงทะเบียน
+4. (เลือกได้) ป้อนข้อมูลแอปเพิ่มเติม: ชื่อเล่นแอปและ `App Store ID`
+5. คลิก "Register app"
 
-Create a Firebase project
+### ขั้นตอนที่ 3: เพิ่มไฟล์การกำหนดค่าของ Firebase
+1. คลิก `"Download GoogleService-Info.plist"` เพื่อรับไฟล์การกำหนดค่า `iOS` ของ `Firebase`
+2. ย้ายไฟล์การกำหนดค่าไปยังรากของโปรเจค Xcode ของคุณ หากมีการแจ้งเตือน ให้เลือกที่จะเพิ่มไฟล์การกำหนดค่าในทุกเป้าหมาย หากคุณมี Bundle ID หลายตัว คุณจะต้องเชื่อมโยงแต่ละ Bundle ID กับแอปที่ลงทะเบียนใน Firebase console เพื่อให้แต่ละแอปมีไฟล์ GoogleService-Info.plist ของตัวเอง
 
-## Step 2: 
-Register your app with Firebase After you have a Firebase project, you can add your iOS app to it.
-Visit Understand Firebase Projects to learn more about best practices and considerations for adding apps to a Firebase project, including how to handle multiple build variants.
+### ขั้นตอนที่ 4: เพิ่ม Firebase SDK ลงในแอปของคุณ
+เราแนะนำให้ใช้ `CocoaPods` ในการติดตั้ง `Firebase libraries` อย่างไรก็ตาม หากคุณไม่ต้องการใช้ `CocoaPods` คุณสามารถรวม `SDK frameworks` โดยตรงได้
 
-#### 1- Go to the Firebase console. 
+1. สร้าง Podfile หากยังไม่มี:
+   ```bash
+   cd your-project-directory
+   pod init
+   ```
 
-#### 2- In the center of the project overview page, click the iOS icon (plat_ios) to launch the setup workflow.
+2. เพิ่ม Firebase pods ที่คุณต้องการใช้ใน Podfile เช่น:
+   ```ruby
+   pod 'Firebase/Analytics' # สำหรับ Google Analytics
+   pod 'Firebase/Auth'      # สำหรับ Firebase Authentication
+   pod 'Firebase/Firestore'  # สำหรับ Cloud Firestore
+   ```
 
-If you've already added an app to your Firebase project, click Add app to display the platform options.
+3. ติดตั้ง pods และเปิดไฟล์ .xcworkspace ของคุณใน Xcode:
+   ```bash
+   pod install
+   open your-project.xcworkspace
+   ```
 
-#### 3- Enter your app's bundle ID in the iOS bundle ID field.
+### ขั้นตอนที่ 5: เริ่มต้น Firebase ในแอปของคุณ
+ขั้นตอนสุดท้ายคือการเพิ่มโค้ดการเริ่มต้นลงในแอปของคุณ ซึ่งคุณอาจจะทำเสร็จแล้วเมื่อเพิ่ม Firebase ลงในแอป หากคุณใช้โปรเจคตัวอย่าง คุณได้ทำสิ่งนี้ไว้แล้ว
 
-What's a bundle ID, and where do you find it?
+1. นำเข้าโมดูล Firebase ใน UIApplicationDelegate ของคุณ:
+   ```swift
+   import Firebase
+   ```
 
-Make sure to enter the bundle ID that your app is actually using. The bundle ID value is case-sensitive, and it cannot be changed for this Firebase iOS app after it's registered with your Firebase project. 
+2. กำหนดค่า FirebaseApp shared instance โดยทั่วไปในเมธอด application:didFinishLaunchingWithOptions ของแอป:
+   ```swift
+   FirebaseApp.configure()
+   ```
 
-#### 4- (Optional) Enter other app information: App nickname and App Store ID.
-
-How are the App nickname and the App Store ID used within Firebase?
-
-#### 5- Click Register app.
-
-## Step 3: 
-Add a Firebase configuration file 
-
-#### 1- Click Download GoogleService-Info.plist to obtain your Firebase iOS config file (GoogleService-Info.plist).
-What do you need to know about this config file?
-
-#### 2- Move your config file into the root of your Xcode project. If prompted, select to add the config file to all targets.
-
-If you have multiple bundle IDs in your project, you must associate each bundle ID with a registered app in the Firebase console so that each app can have its own GoogleService-Info.plist file.
-
-## Step 4: 
-Add Firebase SDKs to your app We recommend using CocoaPods to install the Firebase libraries. However, if you'd rather not use CocoaPods, you can integrate the SDK frameworks directly.
-
-Are you using one of the quickstart samples? The Xcode project and Podfile (with pods) are already present, but you'll still need to add your Firebase configuration file and install the pods.
-
-#### 1- Create a Podfile if you don't already have one: $ cd your-project-directory
-
-$ pod init
-
-#### 2- To your Podfile, add the Firebase pods that you want to use in your app.
-
-You can add any of the supported Firebase products to your iOS app.
-
-Add the Firebase pod for Google Analytics pod 'Firebase/Analytics'
-
-Add the pods for any other Firebase products you want to use in your app
-
-For example, to use Firebase Authentication and Cloud Firestore pod 'Firebase/Auth' pod 'Firebase/Firestore'
-
-#### 3- Install the pods, then open your .xcworkspace file to see the project in Xcode:
-
-$ pod install
-
-$ open your-project.xcworkspace
-
-## Step 5: 
-Initialize Firebase in your app
-
-The final step is to add initialization code to your application. You may have already done this as part of adding Firebase to your app. If you're using a quickstart sample project, this has been done for you.
-
-#### 1- Import the Firebase module in your UIApplicationDelegate: Swift
-
-$ import Firebase
-
-#### 2- Configure a FirebaseApp shared instance, typically in your app's application:didFinishLaunchingWithOptions: method: Swift
-
-// Use Firebase library to configure APIs $ FirebaseApp.configure()
-
-#### 3- If you've included Firebase Analytics, you can run your app to send verification to the Firebase console that you've successfully installed Firebase. That's it! You can skip ahead to the next steps.
+3. หากคุณได้รวม Firebase Analytics คุณสามารถเรียกใช้งานแอปของคุณเพื่อตรวจสอบว่าได้ติดตั้ง Firebase สำเร็จหรือไม่ นั่นคือทั้งหมด! คุณสามารถข้ามไปยังขั้นตอนถัดไปได้
